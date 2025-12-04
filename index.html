@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vocabulario La Casa y la Ciudad</title>
+<style>
+    /* ESTILOS DE LA TABLA - Mismos estilos que el archivo original */
+    body { font-family: Arial, sans-serif; padding: 20px; background-color: #f4f4f4; }
+    
+    .vocab-table {
+        width: 100%;
+        max-width: 800px;
+        margin: 0 auto;
+        border-collapse: collapse;
+        background-color: white;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        margin-bottom: 30px;
+    }
+    
+    .vocab-table th, .vocab-table td {
+        padding: 15px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+        vertical-align: middle;
+    }
+    
+    .vocab-table th {
+        background-color: #2c3e50;
+        color: white;
+        text-transform: uppercase;
+        font-size: 14px;
+        letter-spacing: 1px;
+    }
+    
+    .vocab-table tr:nth-child(even) { background-color: #f9f9f9; }
+    .vocab-table tr:hover { background-color: #f1f1f1; }
+
+    .col-audio { text-align: center; width: 80px; }
+    .col-spanish { color: #555; }
+
+    /* Estilo Modificado para las categorías/separadores */
+    .category-header {
+        background-color: #f0f0f0; /* Gris claro */
+        color: #333; /* Texto oscuro para contraste */
+        text-align: center; /* Centrado */
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        border-top: 1px solid #ccc; /* Borde más sutil */
+        padding: 8px; /* Menor padding para que sea más pequeño */
+        font-size: 12px; /* Letra más pequeña */
+    }
+
+    /* ESTILO DEL BOTÓN PLAY */
+    .play-btn {
+        background-color: #3498db;
+        color: white;
+        border: none;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        transition: transform 0.1s, background-color 0.2s;
+    }
+    
+    .play-btn:hover { background-color: #2980b9; transform: scale(1.1); }
+    .play-btn:active { transform: scale(0.95); }
+    
+    .play-btn svg { width: 16px; height: 16px; fill: white; margin-left: 2px; }
+
+</style>
+</head>
+<body>
+
+<table class="vocab-table">
+    <thead>
+        <tr>
+            <th>ENGLISH</th>
+            <th class="col-audio">AUDIO</th>
+            <th>ESPAÑOL</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr><td colspan="3" class="category-header">TYPE OF HOUSES</td></tr>
+        <tr><td>Appartment / Flat</td><td class="col-audio"><audio id="aud-flat" src="flat.mp3"></audio><button class="play-btn" onclick="playAudio('aud-flat')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td class="col-spanish">Piso</td></tr>
+        <tr><td>Cottage</td><td class="col-audio"><audio id="aud-cottage" src="cottage.mp3"></audio><button class="play-btn" onclick="playAudio('aud-cottage')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td class="col-spanish">Cabaña</td></tr>
+        <tr><td>Villa</td><td class="col-audio"><audio id="aud-villa" src="villa.mp3"></audio><button class="play-btn" onclick="playAudio('aud-villa')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td class="col-spanish">Casa campo</td></tr>
+        <tr><td>Storey building</td><td class="col-audio"><audio id="aud-storey" src="storey.mp3"></audio><button class="play-btn" onclick="playAudio('aud-storey')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td class="col-spanish">Bloque de pisos</td></tr>
+        <tr><td>Castle</td><td class="col-audio"><audio id="aud-castle" src="castle.mp3"></audio><button class="play-btn" onclick="playAudio('aud-castle')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td class="col-spanish">Castillo</td></tr>
+        
+        <tr><td colspan="3" class="category-header">LOCATION</td></tr>
+        <tr><td>Village</td><td class="col-audio"><audio id="aud-village" src="village.mp3"></audio><button class="play-btn" onclick="playAudio('aud-village')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td class="col-spanish">Pueblo</td></tr>
+        <tr><td>City</td><td class="col-audio"><audio id="aud-city" src="city.mp3"></audio><button class="play-btn" onclick="playAudio('aud-city')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td class="col-spanish">Ciudad</td></tr>
+        <tr><td>Close to the shops</td><td class="col-audio"><audio id="aud-closetoshops" src="closetoshops.mp3"></audio><button class="play-btn" onclick="playAudio('aud-closetoshops')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td class="col-spanish">Cerca de las tiendas</td></tr>
+        <tr><td>On the outskirts</td><td class="col-audio"><audio id="aud-outskirts" src="outskirts.mp3"></audio><button class="play-btn" onclick="playAudio('aud-outskirts')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td class="col-spanish">En las afueras</td></tr>
+        <tr><td>Isolated</td><td class="col-audio"><audio id="aud-isolated" src="isolated.mp3"></audio><button class="play-btn" onclick="playAudio('aud-isolated')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td class="col-spanish">Aislado</td></tr>
+        <tr><td>Crowded</td><td class="col-audio"><audio id="aud-crowded" src="crowded.mp3"></audio><button class="play-btn" onclick="playAudio('aud-crowded')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td class="col-spanish">Lleno de gente</td></tr>
+        <tr><td>In the country (side)</td><td class="col-audio"><audio id="aud-countryside" src="countryside.mp3"></audio><button class="play-btn" onclick="playAudio('aud-countryside')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td class="col-spanish">En el campo</td></tr>
+
+        <tr><td colspan="3" class="category-header">SIZE</td></tr>
+        <tr><td>Small</td><td class="col-audio"><audio id="aud-small" src="small.mp3"></audio><button class="play-btn" onclick="playAudio('aud-small')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td class="col-spanish">Pequeño</td></tr>
+        <tr><td>Tiny</td><td class="col-audio"><audio id="aud-tiny" src="tiny.mp3"></audio><button class="play-btn" onclick="playAudio('aud-tiny')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td class="col-spanish">Diminuto</td></tr>
+        <tr><td>Huge</td><td class="col-audio"><audio id="aud-huge" src="huge.mp3"></audio><button class="play-btn" onclick="playAudio('aud-huge')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td class="col-spanish">Enorme</td></tr>
+        <tr><td>Cramped</td><td class="col-audio"><audio id="aud-cramped" src="cramped.mp3"></audio><button class="play-btn" onclick="playAudio('aud-cramped')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td class="col-spanish">Estrecho</td></tr>
+        <tr><td>Large</td><td class="col-audio"><audio id="aud-large" src="large.mp3"></audio><button class="play-btn" onclick="playAudio('aud-large')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td class="col-spanish">Grande</td></tr>
+        <tr><td>Wide</td><td class="col-audio"><audio id="aud-wide" src="wide.mp3"></audio><button class="play-btn" onclick="playAudio('aud-wide')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td class="col-spanish">Ancho</td></tr>
+
+        <tr><td colspan="3" class="category-header">GENERAL DESCRIPTION</td></tr>
+        <tr><td>Nice views</td><td class="col-audio"><audio id="aud-niceviews" src="niceviews.mp3"></audio><button class="play-btn" onclick="playAudio('aud-niceviews')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td class="col-spanish">Bonitas vistas</td></tr>
+        <tr><td>Rear patio (yard)</td><td class="col-audio"><audio id="aud-patio" src="patio.mp3"></audio><button class="play-btn" onclick="playAudio('aud-patio')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td class="col-spanish">Patio trasero</td></tr>
+        <tr><td>Cosy</td><td class="col-audio"><audio id="aud-cosy" src="cosy.mp3"></audio><button class="play-btn" onclick="playAudio('aud-cosy')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td class="col-spanish">Acogedor</td></tr>
+        <tr><td>Comfortable</td><td class="col-audio"><audio id="aud-comfortable" src="comfortable.mp3"></audio><button class="play-btn" onclick="playAudio('aud-comfortable')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td class="col-spanish">Cómodo</td></tr>
+        <tr><td>Secure</td><td class="col-audio"><audio id="aud-secure" src="secure.mp3"></audio><button class="play-btn" onclick="playAudio('aud-secure')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td class="col-spanish">Seguro</td></tr>
+        <tr><td>Noisy</td><td class="col-audio"><audio id="aud-noisy" src="noisy.mp3"></audio><button class="play-btn" onclick="playAudio('aud-noisy')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td class="col-spanish">Ruidoso</td></tr>
+        <tr><td>Cold</td><td class="col-audio"><audio id="aud-cold" src="cold.mp3"></audio><button class="play-btn" onclick="playAudio('aud-cold')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td class="col-spanish">Frío</td></tr>
+        <tr><td>Garden</td><td class="col-audio"><audio id="aud-garden" src="garden.mp3"></audio><button class="play-btn" onclick="playAudio('aud-garden')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td class="col-spanish">Jardín</td></tr>
+        <tr><td>Garage</td><td class="col-audio"><audio id="aud-garage" src="garage.mp3"></audio><button class="play-btn" onclick="playAudio('aud-garage')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td class="col-spanish">Garaje</td></tr>
+
+        <tr><td colspan="3" class="category-header">APPLIANCES & EXTERIOR FEATURES</td></tr>
+        <tr><td>Private parking</td><td class="col-audio"><audio id="aud-privateparking" src="privateparking.mp3"></audio><button class="play-btn" onclick="playAudio('aud-privateparking')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td class="col-spanish">Parking privado</td></tr>
+        <tr><td>Central heating</td><td class="col-audio"><audio id="aud-heating" src="heating.mp3"></audio><button class="play-btn" onclick="playAudio('aud-heating')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td class="col-spanish">Calefacción</td></tr>
+        <tr><td>Air conditioning</td><td class="col-audio"><audio id="aud-aircon" src="aircon.mp3"></audio><button class="play-btn" onclick="playAudio('aud-aircon')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td class="col-spanish">Aire acondicionado</td></tr>
+        <tr><td>Entrance hall</td><td class="col-audio"><audio id="aud-entrancehall" src="entrancehall.mp3"></audio><button class="play-btn" onclick="playAudio('aud-entrancehall')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td class="col-spanish">Entrada</td></tr>
+        <tr><td>Fence</td><td class="col-audio"><audio id="aud-fence" src="fence.mp3"></audio><button class="play-btn" onclick="playAudio('aud-fence')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td class="col-spanish">Valla</td></tr>
+        <tr><td>Chimney</td><td class="col-audio"><audio id="aud-chimney" src="chimney.mp3"></audio><button class="play-btn" onclick="playAudio('aud-chimney')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td class="col-spanish">Chimenea</td></tr>
+
+        <tr><td colspan="3" class="category-header">USEFUL VOCABULARY (ROOMS)</td></tr>
+        <tr><td>Living room</td><td class="col-audio"><audio id="aud-livingroom" src="livingroom.mp3"></audio><button class="play-btn" onclick="playAudio('aud-livingroom')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td class="col-spanish">Salón</td></tr>
+        <tr><td>Dining room</td><td class="col-audio"><audio id="aud-diningroom" src="diningroom.mp3"></audio><button class="play-btn" onclick="playAudio('aud-diningroom')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td class="col-spanish">Comedor</td></tr>
+        <tr><td>Kitchen</td><td class="col-audio"><audio id="aud-kitchen" src="kitchen.mp3"></audio><button class="play-btn" onclick="playAudio('aud-kitchen')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td class="col-spanish">Cocina</td></tr>
+        <tr><td>Bathroom</td><td class="col-audio"><audio id="aud-bathroom" src="bathroom.mp3"></audio><button class="play-btn" onclick="playAudio('aud-bathroom')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td class="col-spanish">Baño</td></tr>
+        <tr><td>Toilet</td><td class="col-audio"><audio id="aud-toilet" src="toilet.mp3"></audio><button class="play-btn" onclick="playAudio('aud-toilet')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td class="col-spanish">Aseo</td></tr>
+        <tr><td>Hall</td><td class="col-audio"><audio id="aud-hall" src="hall.mp3"></audio><button class="play-btn" onclick="playAudio('aud-hall')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td class="col-spanish">Recibidor</td></tr>
+        <tr><td>Laundry room</td><td class="col-audio"><audio id="aud-laundryroom" src="laundryroom.mp3"></audio><button class="play-btn" onclick="playAudio('aud-laundryroom')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td class="col-spanish">Lavadero</td></tr>
+        <tr><td>Cellar</td><td class="col-audio"><audio id="aud-cellar" src="cellar.mp3"></audio><button class="play-btn" onclick="playAudio('aud-cellar')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td class="col-spanish">Bodega</td></tr>
+        <tr><td>Basement</td><td class="col-audio"><audio id="aud-basement" src="basement.mp3"></audio><button class="play-btn" onclick="playAudio('aud-basement')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td class="col-spanish">Sótano</td></tr>
+        <tr><td>Storage room</td><td class="col-audio"><audio id="aud-storageroom" src="storageroom.mp3"></audio><button class="play-btn" onclick="playAudio('aud-storageroom')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td class="col-spanish">Trastero</td></tr>
+
+        <tr><td colspan="3" class="category-header">IN THE LIVING ROOM</td></tr>
+        <tr><td>Fireplace</td><td class="col-audio"><audio id="aud-fireplace" src="fireplace.mp3"></audio><button class="play-btn" onclick="playAudio('aud-fireplace')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td class="col-spanish">Chimenea</td></tr>
+        <tr><td>Carpet</td><td class="col-audio"><audio id="aud-carpet" src="carpet.mp3"></audio><button class="play-btn" onclick="playAudio('aud-carpet')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td class="col-spanish">Alfombra</td></tr>
+        <tr><td>Sofa</td><td class="col-audio"><audio id="aud-sofa" src="sofa.mp3"></audio><button class="play-btn" onclick="playAudio('aud-sofa')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td class="col-spanish">Sofá</td></tr>
+        <tr><td>Paintings</td><td class="col-audio"><audio id="aud-paintings" src="paintings.mp3"></audio><button class="play-btn" onclick="playAudio('aud-paintings')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td class="col-spanish">Cuadros</td></tr>
+        <tr><td>Armchair</td><td class="col-audio"><audio id="aud-armchair" src="armchair.mp3"></audio><button class="play-btn" onclick="playAudio('aud-armchair')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td class="col-spanish">Butaca</td></tr>
+        <tr><td>Chair</td><td class="col-audio"><audio id="aud-chair" src="chair.mp3"></audio><button class="play-btn" onclick="playAudio('aud-chair')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td class="col-spanish">Silla</td></tr>
+        <tr><td>Cushions</td><td class="col-audio"><audio id="aud-cushions" src="cushions.mp3"></audio><button class="play-btn" onclick="playAudio('aud-cushions')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td class="col-spanish">Cojines</td></tr>
+        <tr><td>Curtains</td><td class="col-audio"><audio id="aud-curtains" src="curtains.mp3"></audio><button class="play-btn" onclick="playAudio('aud-curtains')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td class="col-spanish">Cortinas</td></tr>
+        <tr><td>Bookshelf</td><td class="col-audio"><audio id="aud-bookshelf" src="bookshelf.mp3"></audio><button class="play-btn" onclick="playAudio('aud-bookshelf')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td class="col-spanish">Estantería</td></tr>
+        <tr><td>Lamp</td><td class="col-audio"><audio id="aud-lamp" src="lamp.mp3"></audio><button class="play-btn" onclick="playAudio('aud-lamp')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td class="col-spanish">Lámpara</td></tr>
+        
+        <tr><td colspan="3" class="category-header">IN THE KITCHEN</td></tr>
+        <tr><td>Cupboard</td><td class="col-audio"><audio id="aud-cupboard" src="cupboard.mp3"></audio><button class="play-btn" onclick="playAudio('aud-cupboard')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td class="col-spanish">Alacena</td></tr>
+        <tr><td>Cooker</td><td class="col-audio"><audio id="aud-cooker" src="cooker.mp3"></audio><button class="play-btn" onclick="playAudio('aud-cooker')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td class="col-spanish">Cocina (fogones)</td></tr>
+        <tr><td>Microwave</td><td class="col-audio"><audio id="aud-microwave" src="microwave.mp3"></audio><button class="play-btn" onclick="playAudio('aud-microwave')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td class="col-spanish">Microondas</td></tr>
+        <tr><td>Dishwasher</td><td class="col-audio"><audio id="aud-dishwasher" src="dishwasher.mp3"></audio><button class="play-btn" onclick="playAudio('aud-dishwasher')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td class="col-spanish">Lavavajillas</td></tr>
+        <tr><td>Sink</td><td class="col-audio"><audio id="aud-sink" src="sink.mp3"></audio><button class="play-btn" onclick="playAudio('aud-sink')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td class="col-spanish">Fregadero</td></tr>
+        <tr><td>Taps</td><td class="col-audio"><audio id="aud-taps" src="taps.mp3"></audio><button class="play-btn" onclick="playAudio('aud-taps')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td class="col-spanish">Grifos</td></tr>
+        <tr><td>Freezer</td><td class="col-audio"><audio id="aud-freezer" src="freezer.mp3"></audio><button class="play-btn" onclick="playAudio('aud-freezer')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td class="col-spanish">Congelador</td></tr>
+        <tr><td>Fridge</td><td class="col-audio"><audio id="aud-fridge" src="fridge.mp3"></audio><button class="play-btn" onclick="playAudio('aud-fridge')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td class="col-spanish">Nevera</td></tr>
+        <tr><td>Saucepan</td><td class="col-audio"><audio id="aud-saucepan" src="saucepan.mp3"></audio><button class="play-btn" onclick="playAudio('aud-saucepan')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td class="col-spanish">Olla</td></tr>
+        <tr><td>Frying pan</td><td class="col-audio"><audio id="aud-fryingpan" src="fryingpan.mp3"></audio><button class="play-btn" onclick="playAudio('aud-fryingpan')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td class="col-spanish">Sartén</td></tr>
+
+        <tr><td colspan="3" class="category-header">IN THE BATHROOM AND BEDROOM</td></tr>
+        <tr><td>Bedside table</td><td class="col-audio"><audio id="aud-bedsidetable" src="bedsidetable.mp3"></audio><button class="play-btn" onclick="playAudio('aud-bedsidetable')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td class="col-spanish">Mesita de noche</td></tr>
+        <tr><td>Wardrobe</td><td class="col-audio"><audio id="aud-wardrobe" src="wardrobe.mp3"></audio><button class="play-btn" onclick="playAudio('aud-wardrobe')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td class="col-spanish">Armario</td></tr>
+        <tr><td>Mirror</td><td class="col-audio"><audio id="aud-mirror" src="mirror.mp3"></audio><button class="play-btn" onclick="playAudio('aud-mirror')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td class="col-spanish">Espejo</td></tr>
+        <tr><td>Bath</td><td class="col-audio"><audio id="aud-bath" src="bath.mp3"></audio><button class="play-btn" onclick="playAudio('aud-bath')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td class="col-spanish">Bañera</td></tr>
+        <tr><td>Shower</td><td class="col-audio"><audio id="aud-shower" src="shower.mp3"></audio><button class="play-btn" onclick="playAudio('aud-shower')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td class="col-spanish">Ducha</td></tr>
+        <tr><td>Washbasin</td><td class="col-audio"><audio id="aud-washbasin" src="washbasin.mp3"></audio><button class="play-btn" onclick="playAudio('aud-washbasin')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td class="col-spanish">Lavabo</td></tr>
+        <tr><td>Toilet</td><td class="col-audio"><audio id="aud-toilet2" src="toilet2.mp3"></audio><button class="play-btn" onclick="playAudio('aud-toilet2')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td class="col-spanish">Váter (Aseo)</td></tr>
+    </tbody>
+</table>
+
+<script>
+    function playAudio(id) {
+        // Buscar el elemento de audio por su ID
+        var audio = document.getElementById(id);
+        
+        // Chequeo de seguridad: Si no encuentra el audio, avisa en la consola
+        if (!audio) {
+            console.error("ERROR: No encuentro la etiqueta <audio> con id: " + id);
+            return;
+        }
+
+        // 1. Pausar cualquier otro audio que esté sonando
+        document.querySelectorAll('audio').forEach(function(el) {
+            if(el !== audio) {
+                el.pause();
+                el.currentTime = 0;
+            }
+        });
+
+        // 2. Reproducir o pausar el seleccionado
+        if (audio.paused) {
+            var playPromise = audio.play();
+            if (playPromise !== undefined) {
+                playPromise.catch(function(error) {
+                    console.error("ERROR AL REPRODUCIR: Podría ser que el archivo no existe o el nombre está mal escrito (Mayúsculas/Minúsculas).", error);
+                });
+            }
+        } else {
+            audio.pause();
+        }
+    }
+</script>
+
+</body>
+</html>
